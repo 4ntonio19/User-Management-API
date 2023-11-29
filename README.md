@@ -2,10 +2,6 @@
 
 Welcome to the Login-Register project, a small application that provides user login and registration functionalities. This project aims to offer a simple foundation for user authentication.
 
-## Online Testing
-
-You can test the application online by accessing the [GitHub Pages for Login-Register](https://your-username.github.io/login-register).
-
 ## Local Testing (Requires Node.js)
 
 To test locally and explore the API endpoints, follow these instructions:
