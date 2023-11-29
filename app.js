@@ -1,12 +1,12 @@
 const express = require('express');
-
+const router = require('./src/routes/router')
 const app = express();
 
 const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('TA FUNFANDO');
-})
+app.use('/', router);
+app.use('/login', router);
+
 
 app.listen(port, () =>{
     console.log(`A aplicação está rodando na ${port}`);
