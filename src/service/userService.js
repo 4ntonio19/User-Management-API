@@ -1,4 +1,4 @@
-const getUsers = require('../controllers/userController')
+const {getUsers, getUserById } = require('../controllers/userController')
 
 async function listUsers(){
     try{
@@ -9,4 +9,13 @@ async function listUsers(){
     }
 }
 
-module.exports = listUsers();
+async function listUserById(id){
+    try{
+        const results = await getUserById(id);
+        return JSON.parse(results);
+    }catch(error){
+        console.log("Erro no listUserById do service");
+    }
+}
+
+module.exports = {listUsers, listUserById};

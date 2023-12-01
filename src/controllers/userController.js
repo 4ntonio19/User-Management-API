@@ -6,10 +6,25 @@ function getUsers(){
             if(err){
                 reject(err)
             }else{
-                const jsonResults = JSON.stringify(results[0], null);
+                const jsonResults = JSON.stringify(results.map(item =>{
+                    return item;
+                }), null);
                 resolve (jsonResults);
             }
         })
     })
 }
-module.exports = getUsers;
+
+function getUserById(params){
+    return new Promise((resolve, reject) => {
+        connection.execute(`SELECT * FROM users WHERE id = ${params}`, (err, results) =>{
+            if(err){
+                reject(err);
+            }else{
+                const jsonResults = JSON.stringify(results[0], null);
+                resolve(jsonResults);
+            }
+        })
+    })
+}
+module.exports = {getUsers, getUserById};
