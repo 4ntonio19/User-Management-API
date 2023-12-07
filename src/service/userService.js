@@ -1,21 +1,19 @@
-const {getUsers, getUserById } = require('../controllers/userController')
+const userRepository = require('../repository/userRepository')
 
-async function listUsers(){
-    try{
-        const results = await getUsers();
-        return JSON.parse(results);
-    }catch(error){
-        console.log("Erro ao obter o usuário.");
-    }
+const list = () =>{
+    return userRepository.getUsers();
 }
 
-async function listUserById(id){
-    try{
-        const results = await getUserById(id);
-        return JSON.parse(results);
-    }catch(error){
-        console.log("Erro no listUserById do service");
-    }
+const listById = (id) => {
+    return userRepository.getUserById(id);
 }
 
-module.exports = {listUsers, listUserById};
+const create = (body) => {
+    return userRepository.createUser(body);
+}
+
+module.exports = {
+    list,
+    listById,
+    create
+}
