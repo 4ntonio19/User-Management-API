@@ -1,54 +1,75 @@
-# Login-Register Project
+# User Management API
 
-Welcome to the Login-Register project, a small application that provides user login and registration functionalities. This project aims to offer a simple foundation for user authentication.
+Esta é uma API simples para gerenciamento de usuários, desenvolvida em Node.js (v16.20) e Express (v4). A API oferece cinco endpoints básicos para operações CRUD (Create, Read, Update, Delete) de usuários.
 
-## Local Testing (Requires Node.js)
+## Endpoints
 
-To test locally and explore the API endpoints, follow these instructions:
+1. **GET /users/**
+   - Retorna a lista de todos os usuários.
 
-### Prerequisites
+2. **GET /users/:id**
+   - Retorna os detalhes de um usuário específico com base no ID fornecido.
 
-Make sure you have Node.js installed on your machine. This project was developed and tested with Node.js version 20.10.0.
+3. **POST /users/**
+   - Cria um novo usuário. Os dados do usuário devem ser fornecidos no corpo da solicitação.
 
-### Installation
+4. **PUT /users/:id**
+   - Atualiza os dados de um usuário específico com base no ID fornecido. Os dados atualizados devem ser fornecidos no corpo da solicitação.
 
-1. Clone this repository to your computer:
+5. **DELETE /users/:id**
+   - Exclui um usuário específico com base no ID fornecido.
 
-    ```bash
-    git clone https://github.com/your-username/login-register.git
-    ```
+## Configuração do Banco de Dados
 
-2. Navigate to the project directory:
+As variáveis de ambiente necessárias para a configuração do banco de dados estão listadas no arquivo `.env`. Certifique-se de preenchê-las com as informações apropriadas antes de iniciar a aplicação.
 
-    ```bash
-    cd login-register
-    ```
+Exemplo do conteúdo do arquivo `.env`:
 
-3. Install project dependencies using npm:
-
-    ```bash
-    npm install
-    ```
-
-### Execution
-
-To run the project, execute the following command:
-
-```bash
-npm start
+```env
+DB_HOST = localhost
+DB_PORT = porta_banco
+DB_USER = seu_usuario
+DB_PWD = sua_senha
+DB_NAME = nome_do_banco
 ```
 
-This will start the local server, and you can access the application at [http://localhost:3000](http://localhost:3000).
+**Importante:** Crie um arquivo `.env` na raiz do projeto e preencha as variáveis com suas informações específicas.
 
-## API Endpoints
+## Como Usar
 
-If you want to explore the API endpoints, make sure you have followed the installation instructions. After installation, you can start the server locally with `npm start`.
+Siga estas etapas para baixar, configurar e iniciar a aplicação:
 
-The API endpoints are available at:
+1. Clone este repositório:
 
-- Registration Endpoint: [http://localhost:3000/api/register](http://localhost:3000/api/register)
-- Login Endpoint: [http://localhost:3000/api/login](http://localhost:3000/api/login)
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
 
-Make sure to use appropriate tools such as [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the endpoints locally.
+2. Navegue até o diretório do projeto:
 
-We hope this project proves helpful to you. Feel free to contribute or provide feedback!
+   ```bash
+   cd nome-do-repositorio
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Crie um arquivo `.env` e preencha as variáveis de ambiente com as informações do seu banco de dados.
+
+5. Inicie a aplicação:
+
+   ```bash
+   npm run start
+   ```
+
+A aplicação estará disponível em `http://localhost:3000` por padrão. Certifique-se de que o banco de dados está configurado corretamente antes de iniciar a aplicação.
+
+## Contribuições
+
+Sinta-se à vontade para contribuir para este projeto. Abra issues para relatar problemas ou envie pull requests com melhorias.
+
+Este é um repositório gratuito e aberto para colaboração.
+
