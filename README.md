@@ -1,75 +1,74 @@
 # User Management API
 
-Esta é uma API simples para gerenciamento de usuários, desenvolvida em Node.js (v16.20) e Express (v4). A API oferece cinco endpoints básicos para operações CRUD (Create, Read, Update, Delete) de usuários.
+This is a simple user management API, developed in Node.js (v16.20) and Express (v4). The API provides five basic endpoints for CRUD (Create, Read, Update, Delete) operations on users.
 
 ## Endpoints
 
 1. **GET /users/**
-   - Retorna a lista de todos os usuários.
+   - Returns the list of all users.
 
 2. **GET /users/:id**
-   - Retorna os detalhes de um usuário específico com base no ID fornecido.
+   - Retrieves details of a specific user based on the provided ID.
 
 3. **POST /users/**
-   - Cria um novo usuário. Os dados do usuário devem ser fornecidos no corpo da solicitação.
+   - Creates a new user. User data should be provided in the request body.
 
 4. **PUT /users/:id**
-   - Atualiza os dados de um usuário específico com base no ID fornecido. Os dados atualizados devem ser fornecidos no corpo da solicitação.
+   - Updates data for a specific user based on the provided ID. Updated data should be provided in the request body.
 
 5. **DELETE /users/:id**
-   - Exclui um usuário específico com base no ID fornecido.
+   - Deletes a specific user based on the provided ID.
 
-## Configuração do Banco de Dados
+## Database Configuration
 
-As variáveis de ambiente necessárias para a configuração do banco de dados estão listadas no arquivo `.env`. Certifique-se de preenchê-las com as informações apropriadas antes de iniciar a aplicação.
+The necessary environment variables for database configuration are listed in the `.env` file. Make sure to fill them with the appropriate information before starting the application.
 
-Exemplo do conteúdo do arquivo `.env`:
+Example content of the `.env` file:
 
 ```env
 DB_HOST = localhost
-DB_PORT = porta_banco
-DB_USER = seu_usuario
-DB_PWD = sua_senha
-DB_NAME = nome_do_banco
+DB_PORT = database_port
+DB_USER = your_username
+DB_PWD = your_password
+DB_NAME = database_name
 ```
 
-**Importante:** Crie um arquivo `.env` na raiz do projeto e preencha as variáveis com suas informações específicas.
+**Important:** Create a `.env` file in the project root and fill in the variables with your specific information.
 
-## Como Usar
+## How to Use
 
-Siga estas etapas para baixar, configurar e iniciar a aplicação:
+Follow these steps to download, configure, and start the application:
 
-1. Clone este repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   ```
-
-2. Navegue até o diretório do projeto:
+1. Clone this repository:
 
    ```bash
-   cd nome-do-repositorio
+   git clone https://github.com/your-username/repository-name.git
    ```
 
-3. Instale as dependências:
+2. Navigate to the project directory:
+
+   ```bash
+   cd repository-name
+   ```
+
+3. Install dependencies:
 
    ```bash
    npm install
    ```
 
-4. Crie um arquivo `.env` e preencha as variáveis de ambiente com as informações do seu banco de dados.
+4. Create a `.env` file and fill in the environment variables with your database information.
 
-5. Inicie a aplicação:
+5. Start the application:
 
    ```bash
    npm run start
    ```
 
-A aplicação estará disponível em `http://localhost:3000` por padrão. Certifique-se de que o banco de dados está configurado corretamente antes de iniciar a aplicação.
+The application will be available at `http://localhost:3000` by default. Ensure that the database is correctly configured before starting the application.
 
-## Contribuições
+## Contributions
 
-Sinta-se à vontade para contribuir para este projeto. Abra issues para relatar problemas ou envie pull requests com melhorias.
+Feel free to contribute to this project. Open issues to report problems or submit pull requests with improvements.
 
-Este é um repositório gratuito e aberto para colaboração.
-
+This is a free and open repository for collaboration.
